@@ -67,20 +67,15 @@ windower.register_event('incoming chunk', function(id, data)
                 else -- Anything else
                     author_string = string.format(mode_author_strings[mode], author)
                 end
-            end
 
-            -- Aydin check
-            if math.random() < 0.1 then
-                message_string = "bark"
-            end
+                -- Aydin check
+                if math.random() < 0.1 then
+                    message_string = "bark"
+                end
 
-            windower.add_to_chat(incoming_mode, author_string .. message_string)
-            return true
+                windower.add_to_chat(incoming_mode, author_string .. message_string)
+                return true
+            end
         end
-
-        -- Forget this return false to freeze your game on home points for some reason
-        -- I don't know why
-        -- But I definitely didn't experience this nooooo
-        return false
     end
 end)

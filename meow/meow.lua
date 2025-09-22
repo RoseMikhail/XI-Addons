@@ -75,8 +75,12 @@ windower.register_event('incoming chunk', function(id, data)
             end
 
             windower.add_to_chat(incoming_mode, author_string .. message_string)
+            return true
         end
-        
-        return true
+
+        -- Forget this return false to freeze your game on home points for some reason
+        -- I don't know why
+        -- But I definitely didn't experience this nooooo
+        return false
     end
 end)

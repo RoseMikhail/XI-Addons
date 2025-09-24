@@ -36,7 +36,7 @@ defaults.meow = false
 defaults.toggles = {}
 
 for id, _ in pairs(chat_modes) do
-    defaults.toggles[id] = {enabled = true}
+    defaults.toggles[id] = {enabled = false}
 end
 
 settings = config.load(defaults)
@@ -80,8 +80,8 @@ windower.register_event('addon command', function(...)
 
         settings:save('all')
     elseif arg[1]:lower() == 'help' then
-        windower.add_to_chat(167, 'meow toggle (global on/off)')
-        windower.add_to_chat(167, 'meow toggle <chat mode>')
+        windower.add_to_chat(200, 'meow toggle (global on/off)')
+        windower.add_to_chat(200, 'meow toggle <chat mode>')
     else
         windower.add_to_chat(167, 'Invalid command.')
     end

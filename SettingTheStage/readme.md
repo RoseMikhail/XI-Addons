@@ -1,6 +1,6 @@
 # SettingTheStage
 
-This adds a little timer to your screen when you aggro C/G boss that counts down to roughly when they'll cast SettingTheStage.
+This adds a little timer to your screen when you aggro C/G boss that counts down to roughly when they'll cast Setting the Stage.
 
 You can drag the timer around, and it'll save its position.
 

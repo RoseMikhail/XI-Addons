@@ -1,4 +1,4 @@
-# Meow
+# meow
 
 This lets you replace any chat mode's messages with the word "meow" (and occasionally something else).
 

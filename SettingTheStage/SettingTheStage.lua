@@ -8,7 +8,6 @@ local packets = require('packets')
 local config = require('config')
 local texts = require('texts')
 local resources = require('resources')
---require('chat')
 
 -- Config
 local defaults = {}
@@ -68,6 +67,7 @@ windower.register_event('incoming chunk', function(id, data)
                     dead = false
                     start_timer()
                 elseif (mob_status == 2 or mob_status == 3) and not dead then
+                    -- Could potentially instead check 0x029 for the "falls to the ground" action message.
                     engaged = false
                     dead = true
                     if setting_the_stage then
@@ -94,7 +94,6 @@ windower.register_event('incoming chunk', function(id, data)
 
             if (mob_name == "Skomora" or mob_name == "Triboulex") and action_name == "Setting the Stage" then
                 start_timer()
-                windower.add_to_chat(123, "You are fucked.")
             end
         end
     end
